@@ -134,6 +134,8 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
   --fs-quote:clamp(15px,1.45vw,21px);
   --fs-card-h:clamp(18px,1.8vw,25px);
   --fs-card-p:clamp(15px,1.45vw,21px);
+  --fs-crit:clamp(14px,1.42vw,24px);
+  --reply:#3f9e88; --reply-l:#7fdcc6;
   /* section colours (default = gold) */
   --acc:#c8a45a; --acc-l:#e6c97f; --band:#1f2420;
   color-scheme:dark;
@@ -185,6 +187,24 @@ p{margin:0}
 .card{background:var(--navy2);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:6px;padding:16px 20px;min-width:0}
 .card h3{font-family:var(--display);font-weight:700;font-size:var(--fs-card-h);line-height:1.2;margin:0 0 8px;color:var(--acc-l)}
 .card p{font-size:var(--fs-card-p);line-height:1.5;color:var(--text)}
+/* sonsöz: eleştiri → yanıt satırları */
+.slide-body > .critic,.slide-body > .intro-line{max-width:none}
+.critic{display:flex;flex-direction:column;gap:6px}
+.critic-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px}
+.critic-num{flex-shrink:0;width:1.75em;height:1.75em;border-radius:50%;background:var(--acc-l);color:var(--navy);font-family:var(--display);font-weight:700;font-size:clamp(16px,1.5vw,22px);display:inline-flex;align-items:center;justify-content:center}
+.critic-name{font-family:var(--display);font-weight:700;font-size:clamp(20px,2vw,29px);color:var(--text)}
+.critic-src{font-size:clamp(13px,1.15vw,17px);color:var(--muted)}
+.critic-body{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cbox{background:var(--navy2);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:6px;padding:10px 16px;min-width:0}
+.cbox.reply{border-left-color:var(--reply)}
+.cbox .k{display:block;font-size:clamp(12px,1.1vw,17px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-l);margin-bottom:5px}
+.cbox.reply .k{color:var(--reply-l)}
+.cbox ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.cbox li{font-size:var(--fs-crit);line-height:1.42;color:var(--text)}
+.cbox li strong{color:var(--acc-l)}
+.cbox.reply li strong{color:var(--reply-l)}
+.intro-line{font-size:var(--fs-text);line-height:1.45;color:var(--text)}
+.intro-line strong{color:var(--acc-l)}
 .card p em{color:var(--acc-l)}
 
 /* cover — unchanged look */
@@ -232,7 +252,7 @@ button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
   .img-panel::after{background:linear-gradient(0deg, rgba(13,27,42,.75) 0%, rgba(13,27,42,0) 55%)}
   .content-panel{overflow:visible;justify-content:flex-start;padding-left:max(16px, env(safe-area-inset-left,0px))}
   .slide-body{justify-content:flex-start}
-  .cards-2{grid-template-columns:1fr}
+  .cards-2,.critic-body{grid-template-columns:1fr}
   .nav-arrow{display:none}
   .slide-cover::before{background:linear-gradient(0deg, rgba(13,27,42,.95) 0%, rgba(13,27,42,.75) 55%, rgba(13,27,42,.35) 100%)}
 }
@@ -426,6 +446,77 @@ button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
   <header class="slide-header"><h2>Üçüncü Bölüm: Son Söz ve Eleştiriler</h2></header>
   <div class="slide-body">
     <div class="quote-banner std" style="font-size:clamp(19px,2.1vw,30px);line-height:1.55">“Achebe'nin itirazı sadece Conrad'a değildi. Bu kitabı yetmiş yıl boyunca bir başyapıt olarak okuyup içindeki ırkçılığı hiç görmeyen Batılı eleştirmenlere de yönelikti. Tredell'in deyişiyle, Conrad eleştirisi artık <strong style="color:var(--acc-l)">‘Achebe'den önce’</strong> ve <strong style="color:var(--acc-l)">‘Achebe'den sonra’</strong> diye ikiye ayrılıyor.”</div>
+  </div>
+</section>
+
+<!-- SONSÖZ: ELEŞTİRİLER VE YANITLAR 1 -->
+<section class="slide sec-crit" data-section="Üçüncü bölüm" data-title="Üç eleştirmen (1): Achebe">
+  <header class="slide-header"><h2>Son Söz: Üç Eleştirmen, Üç Yanıt</h2><span class="section-tag">1 / 2</span></header>
+  <div class="slide-body">
+    <p class="intro-line">Tredell, 1970'lerin sonunda Conrad hakkındaki fikir birliğini parçalayan <strong>üç eleştirmeni</strong> sırayla anlatıyor: <strong>Achebe (1975), Meisel (1978) ve Watt (1979).</strong> Onlardan önceki eski okumanın örneği C. B. Cox (1974): Afrikalı kadını “vahşi bir hayvan”, nişanlıyı “Avrupa” diye okuyor.</p>
+    <div class="critic">
+      <div class="critic-head"><span class="critic-num">1</span><span class="critic-name">Chinua Achebe</span><span class="critic-src">1975 · Massachusetts Üniversitesi konuşması</span></div>
+      <div class="critic-body">
+        <div class="cbox"><span class="k">Eleştirisi</span>
+          <ul>
+            <li>Conrad <strong>“düpedüz bir ırkçı”</strong>. Afrikalılar konuşmuyor, isimsiz ve dilsiz. Afrika, Avrupa'nın karşıtı olarak kurulmuş bir dekor, Avrupa için <strong>“Dorian Gray'in portresi”</strong>.</li>
+            <li>Bir halkı insanlıktan çıkaran eser, ne kadar usta yazılmış olursa olsun, <strong>büyük sanat sayılamaz</strong>.</li>
+            <li>Kanıtları: Conrad'ın Haiti'de gördüğü “devasa zenci” ile hayranlıkla anlattığı “unutamadığım İngiliz” arasındaki fark. Conrad Afrikalıları “vahşi” diye anlatırken Kongo'nun Fang halkının maskı Picasso'yu etkiliyor ve kübizmi doğuruyordu.</li>
+            <li>Sonuç: Conrad sömürgeciliğin kötülüğünü gördü, ama <strong>ırkçılığın farkında değildi</strong>.</li>
+          </ul>
+        </div>
+        <div class="cbox reply"><span class="k">Yanıtı</span>
+          <ul>
+            <li>İlk tepki şok: Yaşlı bir İngiliz profesör <strong>“Bu ne cesaret!”</strong> diyor. Bir başkası: <strong>“Yıllardır okutuyorum, meğer hiç okumamışım.”</strong></li>
+            <li><strong>Frances B. Singh (1978):</strong> Marlow'un etnomerkezciliğini Conrad da paylaşıyor, ama kitap başyapıtlar arasından çıkarılmamalı.</li>
+            <li>Önce sessizlik var, Watt 1979'da Achebe'yi hiç anmıyor. <strong>1980'den sonra yanıt seli</strong> başlıyor ve 1988 Norton baskısı Achebe'yi yanıtlarıyla birlikte basıyor.</li>
+            <li><strong>Tredell:</strong> Saldırı Conrad çalışmalarına canlılık kattı, ama “eski kafalı”, çünkü romanın tek ve gerçek bir anlamı olması gerektiğini varsayıyor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SONSÖZ: ELEŞTİRİLER VE YANITLAR 2 -->
+<section class="slide sec-crit" data-section="Üçüncü bölüm" data-title="Üç eleştirmen (2): Meisel ve Watt">
+  <header class="slide-header"><h2>Son Söz: Üç Eleştirmen, Üç Yanıt</h2><span class="section-tag">2 / 2</span></header>
+  <div class="slide-body" style="gap:10px;padding-top:10px;padding-bottom:52px">
+    <div class="critic">
+      <div class="critic-head"><span class="critic-num">2</span><span class="critic-name">Perry Meisel</span><span class="critic-src">1978 · “Karanlığın Yüreği'ni Merkezsizleştirmek”</span></div>
+      <div class="critic-body">
+        <div class="cbox"><span class="k">Eleştirisi</span>
+          <ul>
+            <li>Sorun Conrad'da değil, onu okuyanlarda. Eleştirmenler (Reid, Gurko, Guerard) metne <strong>sabit, tek bir anlam</strong> yüklüyor. Kongo'yu “bilinçaltının toprakları” diye okuyunca Afrikalıları ilkel varsaymak zorunda kalıyorlar.</li>
+            <li>Kurtz'un altında bulunacak bir “öz” yok. Kurtz yalnızca <strong>“bir ses”</strong>. Adı Almancada “kısa” demek, romanda ise “uzun boylu” diye anılıyor. Kitap var olmayan bir merkezle bizi kandırıyor.</li>
+          </ul>
+        </div>
+        <div class="cbox reply"><span class="k">Yanıtı (Tredell)</span>
+          <ul>
+            <li>Meisel kendisinin de gizli bir gerçek aradığını kabul ediyor. Bulduğu gizli gerçek ise <strong>gizli bir gerçeğin olmaması</strong>.</li>
+            <li>Yine de 1970'ler için çok yıkıcı bir okuma. Achebe'yle uyuşmasa da ikisi birlikte <strong>1980–90'ların eleştirisinin habercisi</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="critic">
+      <div class="critic-head"><span class="critic-num">3</span><span class="critic-name">Ian Watt</span><span class="critic-src">1979 · <em>Conrad in the Nineteenth Century</em></span></div>
+      <div class="critic-body">
+        <div class="cbox"><span class="k">Eleştirisi</span>
+          <ul>
+            <li>Simgesel yorumlara karşı çıkıyor. Yün ören kadınları Dante ya da kader tanrıçası Mireler diye okuyanlar <strong>“Neden iki kadın? Makas nerede?”</strong> gibi verimsiz sorulara saplanıyor.</li>
+            <li>“Düz anlam”a dönülmeli. Ona göre kitap <strong>“sömürgecilik ve ırkçılıkla uzun boylu ilgilenmiyor, siyasi bir eser değil.”</strong></li>
+          </ul>
+        </div>
+        <div class="cbox reply"><span class="k">Yanıtı (Tredell)</span>
+          <ul>
+            <li>Achebe'den sonra kitabı siyasetten arındırmak tartışmalı. Watt'ın okuması ya <strong>sağduyuya dönüş</strong> ya da düz mantığa gerileme, büyük ihtimalle ikisinin arası.</li>
+            <li>Bazı açılardan eski kafalı, ama yöntemini açıkça tartışan modern bir eleştirmen. Farkında olmadan Meisel'e yaklaşıyor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="footer-note">Aynı yıl, 1979'da, Coppola'nın <em>Kıyamet</em> (Apocalypse Now) filmi hikâyeyi Vietnam'a taşıyor. Tredell'in son sözü: “Her şey parçalanmaya başlıyordu.”</p>
   </div>
 </section>
 
