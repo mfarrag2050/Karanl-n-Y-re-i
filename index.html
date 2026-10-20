@@ -148,6 +148,12 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .sec-three   { --acc:#82508f; --acc-l:#d6a6e0; --band:#241c33; }
 .sec-notes   { --acc:#b8762a; --acc-l:#f3bf72; --band:#2a2219; }
 .sec-crit    { --acc:#a3384b; --acc-l:#f1899b; --band:#2b1724; }
+.sec-said    { --acc:#2f9bb5; --acc-l:#97e2f3; --band:#0f2a33; }
+.said-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.said-grid .card{padding:12px 18px}
+.said-grid .card h3{font-size:clamp(17px,1.65vw,25px);margin-bottom:6px}
+.said-grid .card p{font-size:var(--fs-crit);line-height:1.45}
+.said-grid .card p strong{color:var(--acc-l)}
 
 html,body{height:100%}
 body{background:var(--navy);color:var(--text);font-family:var(--body);overflow:hidden;-webkit-font-smoothing:antialiased}
@@ -204,6 +210,8 @@ p{margin:0}
 .cbox li strong{color:var(--acc-l)}
 .cbox.reply li strong{color:var(--reply-l)}
 .intro-line{font-size:var(--fs-text);line-height:1.45;color:var(--text)}
+.slide-body > .footer-note{max-width:none}
+.footer-note{margin:0;font-family:var(--display);font-style:italic;color:var(--acc-l);font-size:clamp(15px,1.45vw,23px);line-height:1.45;border-top:1px solid var(--line);padding-top:10px}
 .intro-line strong{color:var(--acc-l)}
 .card p em{color:var(--acc-l)}
 
@@ -252,7 +260,7 @@ button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
   .img-panel::after{background:linear-gradient(0deg, rgba(13,27,42,.75) 0%, rgba(13,27,42,0) 55%)}
   .content-panel{overflow:visible;justify-content:flex-start;padding-left:max(16px, env(safe-area-inset-left,0px))}
   .slide-body{justify-content:flex-start}
-  .cards-2,.critic-body{grid-template-columns:1fr}
+  .cards-2,.critic-body,.said-grid{grid-template-columns:1fr}
   .nav-arrow{display:none}
   .slide-cover::before{background:linear-gradient(0deg, rgba(13,27,42,.95) 0%, rgba(13,27,42,.75) 55%, rgba(13,27,42,.35) 100%)}
 }
@@ -481,7 +489,7 @@ button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
 <!-- SONSÖZ: ELEŞTİRİLER VE YANITLAR 2 -->
 <section class="slide sec-crit" data-section="Üçüncü bölüm" data-title="Üç eleştirmen (2): Meisel ve Watt">
   <header class="slide-header"><h2>Son Söz: Üç Eleştirmen, Üç Yanıt</h2><span class="section-tag">2 / 2</span></header>
-  <div class="slide-body" style="gap:10px;padding-top:10px;padding-bottom:52px">
+  <div class="slide-body" style="gap:8px;padding-top:8px;padding-bottom:46px">
     <div class="critic">
       <div class="critic-head"><span class="critic-num">2</span><span class="critic-name">Perry Meisel</span><span class="critic-src">1978 · “Karanlığın Yüreği'ni Merkezsizleştirmek”</span></div>
       <div class="critic-body">
@@ -517,6 +525,21 @@ button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
       </div>
     </div>
     <p class="footer-note">Aynı yıl, 1979'da, Coppola'nın <em>Kıyamet</em> (Apocalypse Now) filmi hikâyeyi Vietnam'a taşıyor. Tredell'in son sözü: “Her şey parçalanmaya başlıyordu.”</p>
+  </div>
+</section>
+
+<!-- EDWARD SAID VE CONRAD -->
+<section class="slide sec-said" data-section="Edward Said" data-title="Edward Said ve Conrad">
+  <header class="slide-header"><h2>Edward Said ve Conrad</h2></header>
+  <div class="slide-body" style="gap:12px;padding-top:12px;padding-bottom:56px">
+    <p class="intro-line" style="max-width:none">Said'in Harvard'daki doktora tezi Conrad üzerine: <strong><em>Joseph Conrad and the Fiction of Autobiography</em> (1966)</strong>. Conrad'a <em>Kültür ve Emperyalizm</em>'de (1993) ve “Between Worlds” (1998) denemesinde yeniden döner. Ona göre Conrad, yazdıklarının altında hep çalan bir <strong>“cantus firmus”</strong>, yani sabit bir ana ezgi.</p>
+    <div class="said-grid" style="max-width:none">
+      <div class="card"><h3>1. Bir sürgün yazarı</h3><p>Conrad'ın yazısı, hiç giderilemeyen bir <strong>sürgün ve yabancılaşma</strong> deneyiminden doğuyor. Yeni bir dile ustalıkla hâkim olmak bile bunu bitirmiyor. Said kendini de böyle görüyor (Kudüs, Mısır, Amerika): <strong>“Conrad bu yoldan benden önce geçmişti.”</strong></p></div>
+      <div class="card"><h3>2. Trajik sınır</h3><p>Conrad emperyalizmin bir <strong>egemenlik ve toprak gaspı</strong> olduğunu açıkça gördü. Ama emperyalizmin bitmesi ve yerlilerin Avrupa egemenliğinden bağımsız yaşaması gerektiği sonucunu çıkaramadı. Kendi döneminin insanıydı ve <strong>yerlilere özgürlüğü tanıyamadı.</strong></p></div>
+      <div class="card"><h3>3. İki vizyon</h3><p>Birinci okuma emperyal girişimi verili kabul ediyor ve Afrikalılara ses vermiyor. İkinci okumada Conrad, Marlow'un anlatısını bir çerçeveye koyarak ve şirkete ironik bir mesafeden bakarak emperyalizmin <strong>geçici, kırılgan ve yapay</strong> olduğunu sezdiriyor. Ama bu ihtimalin içini dolduramıyor.</p></div>
+      <div class="card"><h3>4. Achebe'den farkı</h3><p>Achebe meseleyi <strong>ırk</strong> üzerinden ele alıyor: Conrad ırkçıdır. Said ise <strong>siyaset ve tarih</strong> üzerinden: Conrad, Afrikalıların direnebileceğini ve kendi geleceklerini kurabileceğini hayal edemedi. Said kitabı reddetmiyor. Kitabın ikiyüzlülüğü, Kurtz'un aşırılıklarını ve yozlaşmayı gördüğünü kabul ediyor.</p></div>
+    </div>
+    <p class="footer-note" style="max-width:none">Said'e göre Conrad, emperyalizmin bir soygun olduğunu gören ama sömürülenlerin özgür bir gelecek kurabileceğini hayal edemeyen, döneminin sınırlarına takılmış büyük bir sürgün yazardır. <em>Oryantalizm</em>'deki fikirle aynı: Öteki kendini anlatamaz, başkası tarafından anlatılır.</p>
   </div>
 </section>
 
